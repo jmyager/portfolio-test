@@ -26,7 +26,7 @@
 				position: absolute;
 				padding: 20px;
 				left: 100px;
-				top: 32px;
+				top: 12px;
 				width: 200px;
 				background-color: #4aaaa5;
 				color: white;
@@ -34,24 +34,36 @@
             }
 
             header {
-				padding: 60px 160px 30px 30px;
+				padding: 40px 160px 30px 30px;
 				background-color: white;
 				text-align: right;
-				border-bottom: solid 1px gray;
+				border-bottom: solid 1px #cccccc;
 				margin: 0px;
-            }
+			}
+			
+			li {
+                list-style-type: none;
+				display: inline;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			li+li { 
+				border-left: 1px solid #000000;
+			}
 
             .maincontent {
 				float: left;
 				position: absolute;
 				left: 100px;
-				width: 608px;
+				width: 650px;
 				height: 400px;
 				padding: 20px;
 				margin-top: 40px;
 				border: 1px solid #dddddd;
 				z-index: 1;
 				background-color: #ffffff;
+				box-sizing: border-box;
 			}
 			
 			img {
@@ -66,36 +78,30 @@
 				width: 150px;
 				margin: 20px;
 			}
-
-            li {
-                list-style-type: none;
-				display: inline;
-				padding-left: 20px;
-				padding-right: 20px;
-			}
-
-			li+li { 
-				border-left: 1px solid #000000;
-			}
 			
 			.sidebar {
 				float: left;
 				position: absolute;
 				padding: 20px;
 				left: 790px;
-				width: 228px;
-				height: 150px;
+				width: 270px;
+				height: 200px;
 				margin-top: 40px;
 				text-align: center;
 				border: 1px solid #dddddd;
 				z-index: 1;
 				background-color: #ffffff;
+				box-sizing: border-box;
 			}
 
 			.socialicon {
 				display: inline-block;
 				margin: 1px;
 				padding: 6px;
+			}
+
+			.socialicon:hover {
+				padding-top: 1px;
 			}
 
 			a {
@@ -133,23 +139,40 @@
 				width: 100px;
 			}
 
-			#portfolio_thumb {
-				display: inline-block;
-				width: 194px;
-				height: 194px;
-				padding: 30px 10px 30px 45px;
-				margin: 0px;
-			}
-
 			.portfolio_content {
 				float: left;
 				position: absolute;
 				left: 100px;
 				width: 608px;
-				height: 900px;
+				height: 1000px;
 				padding: 20px;
 				margin-top: 40px;
 				border: 1px solid #dddddd;
 				z-index: 1;
 				background-color: #ffffff;
+			}
+
+			.portfolio_link {
+				position: relative;
+				display: inline-block;
+			}
+
+			.portfolio_thumb {
+				display: inline-block;
+				width: 250px;
+				height: 250px;
+				margin: 25px;
+				box-sizing: border-box;
+			}
+
+			.thumb_banner {
+				position: absolute;
+				color: white;
+				background-color: rgba(74,170,165,0.8);
+				padding: 20px 10px;
+				width: 250px;
+				margin: 25px;
+				top: 50%;
+				box-sizing: border-box;
+				text-align: center;
 			}
