@@ -116,6 +116,7 @@ img {
     height: 250px;
     margin: 25px;
     box-sizing: border-box;
+    background-size: 100% auto auto;
 }
 
 .portfolio_link {
