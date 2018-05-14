@@ -11,11 +11,7 @@
 
         <title>Josh Yager Portfolio</title>
 
-        <script>
-            $('#myModal').on('shown.bs.modal', function () {
-                $('#myInput').trigger('focus')
-            })
-        </script>
+        
     </head>
 
     <body>
@@ -23,7 +19,7 @@
        <!-- Navigation -->
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand custom" href="#"><h1>Josh Yager</h1></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler pull-xs-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
@@ -45,11 +41,10 @@
         <!-- Body Content -->
         <div class="container">
 
-
             <div class="row">
 
 
-                <div class="maincontent col-md-7 col-sm-12">
+                <div class="maincontent col-lg-7 col-sm-12">
                     <h2 class="contentH1">About Me</h2>
                     <img class="profilePhoto" src="./assets/images/profile.jpg" alt="Profile photo of Josh Yager">
                     <p>Hey there! My name is Josh Yager. I am a student at UNC Chapel Hill's Coding Bootcamp, where I'm on a rapid pace to become a web developer. I graduated from NC State University with a Bachelor's in Business Administration and joined a small startup in Durham fresh out of college.</p>
@@ -57,12 +52,20 @@
                     <p>I learned a lot and love the start-up life, but I always longed to be on the tech side of things. Fast-forward to today, and I'm now on track to pursue my dreams of being a developer! I look forward to seeing what opportunities await me in the months to come!</p>
                 </div>
 
-                <div class="sidebar col-md-3 col-sm-12">
-                    <h4 class="contentH1">Connect with me</h4>
-                    <a href="https://github.com/jmyager"><img class="socialIcon img-thumbnail" src="./assets/images/github_logo.jpg" alt="github icon"></a>
-                    <a href="https://www.linkedin.com/in/jmyager/"><img class="socialIcon img-thumbnail" src="./assets/images/linkedin_logo.jpg" alt="linkedin icon"></a>
-                    <a href="https://stackoverflow.com/users/9263289/josh-yager?tab=profile"><img class="socialIcon img-thumbnail" src="./assets/images/stack_overflow_logo.jpg" alt="stack overflow icon"></a>
+                <div class="col-lg-1 col-sm-2"></div>
+
+                <div class="sidebar col-lg-3 col-sm-8">
+                    <div class="row">
+                        <h4 class="contentH1">Connect with me</h4>
+                    </div>
+                    <div class="row">
+                        <a class="col-md-4 col-sm-4" href="https://github.com/jmyager"><img class="socialIcon img-thumbnail" src="./assets/images/github_logo.jpg" alt="github icon"></a>
+                        <a class="col-md-4 col-sm-4" href="https://www.linkedin.com/in/jmyager/"><img class="socialIcon img-thumbnail" src="./assets/images/linkedin_logo.jpg" alt="linkedin icon"></a>
+                        <a class="col-md-4 col-sm-4" href="https://stackoverflow.com/users/9263289/josh-yager?tab=profile"><img class="socialIcon img-thumbnail" src="./assets/images/stack_overflow_logo.jpg" alt="stack overflow icon"></a>
+                    </div>
                 </div>
+
+                <div class="col-lg-1 col-sm-2"></div>
 
 
             </div>
