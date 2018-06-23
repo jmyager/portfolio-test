@@ -1,86 +1,325 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/set2.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Josh Yager | Designer & Full Stack Developer</title>
 
-        <title>Josh Yager Portfolio</title>
+</head>
 
-        
-    </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-white justify-content-center">
+        <a href="/" class="navbar-brand mr-0">
+            <img src="assets/images/logo.png" href="/" height="48">
+        </a>
+        <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 
-    <body>
-
-       <!-- Navigation -->
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand custom" href="#"><h1>Josh Yager</h1></a>
-        <button class="navbar-toggler pull-xs-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto justify-content-end">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">About<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+            <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/jmyager">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-lg btn-outline-primary roundButton" href="">Say Hello</button>
+                </li>
             </ul>
         </div>
-        </nav>
-                
-        <!-- Body Content -->
+    </nav>
+
+    <!-- Hero -->
+    <div id="home" class="jumbotron jumbotron-fluid section">
         <div class="container">
+            <h1 class="title">
+                <b>Designer & Full Stack Developer</b>
+            </h1>
+            <p class="lead">I code clean and elegant designs, and I love what I do.</p>
+            <p class="lead">
+                <img class="profilePic" src="assets/images/profile.jpg">
+            </p>
+        </div>
+    </div>
 
-            <div class="row">
+    <!-- About -->
+    <i onclick="topFunction()" id="scrollBtn" class="fas fa-arrow-alt-circle-up fa-2x"></i>
 
+    <div id="about" class="container-fluid text-center">
+        <h2 class="headerText">
+            <b>Hi I'm Josh, nice to meet you.</b>
+        </h2>
+        <p class="bodyText">Since beginning my journey as a web developer 3 years ago, I've designed custom websites for clients, assembled a
+            wide range of full stack applications, and sharpened my skills at UNC Chapel Hill's Coding Bootcamp. I'm quietly
+            confident, eager to create, and perpetually deepening my knowledge in web dev.</p>
+    </div>
 
-                <div class="maincontent col-lg-7 col-sm-12">
-                    <h2 class="contentH1">About Me</h2>
-                    <img class="profilePhoto" src="./assets/images/profile.jpg" alt="Profile photo of Josh Yager">
-                    <p>Hey there! My name is Josh Yager. I am a student at UNC Chapel Hill's Coding Bootcamp, where I'm on a rapid pace to become a web developer. I graduated from NC State University with a Bachelor's in Business Administration and joined a small startup in Durham fresh out of college.</p>
-                    <br>
-                    <p>I learned a lot and love the start-up life, but I always longed to be on the tech side of things. Fast-forward to today, and I'm now on track to pursue my dreams of being a developer! I look forward to seeing what opportunities await me in the months to come!</p>
-                </div>
-
-                <div class="col-lg-1 col-sm-2"></div>
-
-                <div class="sidebar col-lg-3 col-sm-8">
-                    <div class="row">
-                        <h4 class="contentH1">Connect with me</h4>
+    <!-- Skills -->
+    <div id="skills">
+        <div class="container">
+            <div class="card-group skillCards">
+                <div class="card text-center">
+                    <div class="card-img-top">
+                        <i class="fas fa-paint-brush fa-3x"></i>
                     </div>
-                    <div class="row">
-                        <a class="col-md-4 col-sm-4" href="https://github.com/jmyager"><img class="socialIcon img-thumbnail" src="./assets/images/github_logo.jpg" alt="github icon"></a>
-                        <a class="col-md-4 col-sm-4" href="https://www.linkedin.com/in/jmyager/"><img class="socialIcon img-thumbnail" src="./assets/images/linkedin_logo.jpg" alt="linkedin icon"></a>
-                        <a class="col-md-4 col-sm-4" href="https://stackoverflow.com/users/9263289/josh-yager?tab=profile"><img class="socialIcon img-thumbnail" src="./assets/images/stack_overflow_logo.jpg" alt="stack overflow icon"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Designer</h5>
+                        <p class="card-text">I value clean lines, minimalist design, and thoughtful experiences.</p>
+                        <h6 class="card-text skillCardSub">Things I enjoy designing:</h6>
+                        <p class="card-text">UX, UI, Web, Mobile, Apps</p>
+                        <h6 class="card-text skillCardSub">Design Tools:</h6>
+                        <p class="card-text">Adobe Photoshop
+                            <br> Adobe Lightroom
+                            <br> Canva
+                            <br> Pen & Paper
+                            <br> VS Code</p>
                     </div>
                 </div>
-
-                <div class="col-lg-1 col-sm-2"></div>
-
-
+                <div class="card text-center">
+                    <div class="card-img-top">
+                        <i class="far fa-file-code fa-3x"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Front-End Developer</h5>
+                        <p class="card-text">I often code from scratch, and love to create magic in the browser</p>
+                        <h6 class="card-text skillCardSub">Languages I speak:</h6>
+                        <p class="card-text">HTML5, CSS3, Bootstrap, Javascript, Jquery</p>
+                        <h6 class="card-text skillCardSub">Dev Tools:</h6>
+                        <p class="card-text">Responsive Design
+                            <br> Handlebars
+                            <br> Firebase
+                            <br> Cookies & Local Storage
+                            <br> Inspector </p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-img-top">
+                        <i class="fas fa-server fa-3x"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Back-End Developer</h5>
+                        <p class="card-text">I deploy full-stack, dynamic applications with real world implications</p>
+                        <h6 class="card-text skillCardSub">Languages I speak:</h6>
+                        <p class="card-text">Node.js, Express, MySQL, ASP.net, React.js</p>
+                        <h6 class="card-text skillCardSub">Dev Tools:</h6>
+                        <p class="card-text">Git
+                            <br> Heroku
+                            <br> MongoDB
+                            <br> MERN Stack
+                            <br> Testing </p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <h2 class="headerText">
+            <b>My Recent Work</b>
+        </h2>
+        <p>Here are a few recent design projects. Want to see more? Email me.</p>
 
 
+        <div class="portfolioGrid">
+            <div class="row">
+                <div class="grid">
+                    <figure class="effect-julia">
+                        <img src="assets/images/imprompto.png" alt="imprompto app project thumbnail" />
+                        <figcaption>
+                            <h2>Imprompto App</h2>
+                            <div>
+                                <p>Javascript</p>
+                                <p>JQuery</p>
+                                <p>APIs</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <a href="https://shreedamin.github.io/imprompto">View more</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="effect-julia">
+                        <img src="assets/images/buzz'd.png" alt="buzz'd app project thumbnail" />
+                        <figcaption>
+                            <h2>Buzz'd App</h2>
+                            <div>
+                                <p>Javascript</p>
+                                <p>JQuery</p>
+                                <p>Hammerjs</p>
+                                <p>Materialize</p>
+                                <p>Bootstrap</p>
+                                <p>MySQL</p>
+                                <p>Express</p>
+                                <p>Sequelize</p>
+                            </div>
+                            <a href="https://fathomless-depths-99227.herokuapp.com/">View more</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="effect-julia">
+                        <img src="assets/images/rpg-game.jpg" alt="rpg-game project thumbnail" />
+                        <figcaption>
+                            <h2>RPG Game</h2>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>Javascript</p>
+                                <p>JQuery</p>
+                            </div>
+                            <a href="https://jmyager.github.io/week-4-game/">View more</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="effect-julia">
+                        <img src="assets/images/train-schedule.jpg" alt="train schedule project thumbnail" />
+                        <figcaption>
+                            <h2>Train Schedule</h2>
+                            <div>
+                                <p>Firebase</p>
+                                <p>JQuery</p>
+                                <p>Bootstrap</p>
+                                <p>Javascript</p>
+                            </div>
+                            <a href="https://jmyager.github.io/Train-Schedule/">View more</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="effect-julia">
+                        <img src="assets/images/hangman.jpg" alt="hangman game project thumbnail" />
+                        <figcaption>
+                            <h2>Hangman Game</h2>
+                            <div>
+                                <p>Javascript</p>
+                                <p>JS Arrays</p>
+                                <p>JS Functions</p>
+                                <p>Bootstrap</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <a href="https://jmyager.github.io/Hangman-Game/">View more</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="effect-julia">
+                        <img src="assets/images/trivia-game.jpg" alt="trivia game project thumbnail" />
+                        <figcaption>
+                            <h2>Trivia Game</h2>
+                            <div>
+                                <p>Javascript</p>
+                                <p>JS Timers</p>
+                                <p>JS Functions</p>
+                                <p>Bootstrap</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <a href="https://jmyager.github.io/TriviaGame/">View more</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="effect-julia">
+                        <img src="assets/images/giphy-app.jpg" alt="giphy app project thumbnail" />
+                        <figcaption>
+                            <h2>Giphy App</h2>
+                            <div>
+                                <p>APIs</p>
+                                <p>Firebase</p>
+                                <p>Javascript</p>
+                                <p>JQuery</p>
+                                <p>HTML</p>
+                            </div>
+                            <a href="https://jmyager.github.io/GiphyApp/">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
 
+        <button class="btn btn-lg btn-outline-primary roundButton" href="https://github.com/jmyager">See more on Github</button>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </div>
 
-    </body>
+    <!-- Testimonials -->
+    <div id="testimonials" class="container-fluid text-center">
+        <h2 class="headerText">
+            <b>Testimonials</b>
+        </h2>
+        <p class="bodyText">People I've worked with have said some nice things...</p>
+        <br>
+        <img class="profilePic testimonialPhoto" src="assets/images/niharProfile.jpg">
+        <h4>"Josh was a real pleasure to work with and we look forward to working with him again. He’s the kind of designer you
+            can trust with a project from start to finish."</h4>
+        <br>
+        <p>
+            <b>Nihar Paranjpe</b>
+            <br>
+            <small>Client</small>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="container-fluid">
+        <div class="projectBar text-center">
+            <div class="row">
+                <h4 class="col-md projectBarItem">
+                    <b>Start a project</b>
+                </h4>
+                <div class="col-md projectBarItem">Interested in working together? Let's chat. I'll buy the cofee.</div>
+                <div class="col-md">
+                    <button class="btn btn-lg btn-outline-primary roundButton projectBarItem">Let's do this</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerBody container text-center">
+            <img class="footerItem" src="assets/images/logo.png" height="100">
+            <h4>Living, learning, and leveling up</h4>
+            <h4 class="footerItem">one day at a time.</h4>
+            <button class="btn btn-sm btn-outline-primary circleIcon">
+                <i class="fab fa-twitter fa-lg"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-primary circleIcon">
+                <i class="fab fa-github fa-lg"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-primary circleIcon">
+                <i class="fab fa-linkedin-in fa-lg"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-primary circleIcon">
+                <i class="fab fa-angellist fa-lg"></i>
+            </button>
+            <p class="handcrafted">Handcrafted by me</p>
+            <p>Made with Bootstrap</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/main.js"></script>
+
+</body>
 
 </html>
-    
