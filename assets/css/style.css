@@ -148,7 +148,7 @@ a:hover {
   margin-right: auto;
 }
 
-/* @media only screen and (max-width: 764px) {
+@media only screen and (max-width: 764px) {
   .clientCard {
       margin-top: 40%;
       margin-bottom: -20%;
@@ -156,7 +156,7 @@ a:hover {
   .clientPara {
     margin-bottom: -20%
   }
-} */
+}
 
 #testimonials {
   background-color: white;
