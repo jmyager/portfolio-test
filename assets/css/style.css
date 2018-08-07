@@ -8,6 +8,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+img {
+    object-fit: cover;
+}
+
 .headerText {
   margin-top: 5%;
   padding-bottom: 2%;
@@ -55,7 +59,7 @@ body {
   border-radius: 50%;
 }
 
-#about, #testimonials{
+#about, #testimonials, #clientWork{
   background-color: #0066ff;
   color: white;
   padding: 5% 20% 18% 20%;
@@ -126,11 +130,41 @@ a:hover {
   padding-bottom: 10%;
 }
 
+#clientWork {
+  height: auto;
+  padding-bottom: 0;
+}
+
+.clientCard {
+  margin-bottom: -30%;
+  margin-top: 20%;
+  border-radius: 25px;
+  color: black;
+}
+
+.clientLogo {
+  width: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* @media only screen and (max-width: 764px) {
+  .clientCard {
+      margin-top: 40%;
+      margin-bottom: -20%;
+  }
+  .clientPara {
+    margin-bottom: -20%
+  }
+} */
+
 #testimonials {
   background-color: white;
   color: black;
   border-top: 1px solid lightgray;
   height: 55rem;
+  padding-top: 20%;
+  margin-bottom: 8rem;
 }
 
 .testimonialPhoto {
@@ -139,7 +173,7 @@ a:hover {
 
 #footer {
   background-color: #0066ff;
-  height: 38rem;
+  height: 42rem;
 }
 
 .projectBar {
@@ -148,6 +182,7 @@ a:hover {
   width: auto;
   margin-left: 1.75rem;
   margin-right: 1.75rem;
+  margin-top: 2rem;
   background-color: #293347;
   border-radius: 15px;
   padding: 3% 2%;
@@ -178,8 +213,9 @@ a:hover {
   border-radius: 50%;
   border: .12rem solid #b3d1ff;
   color: white;
-  font-size: 1.25rem;
-  display: inline;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 48px;
   margin: 0rem .25rem;
 }
 
@@ -249,9 +285,12 @@ a:hover {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 1; /* Make sure it does not overlap */
   color: rgb(0, 102, 255, 0.5); /* Set a background color */
   cursor: pointer; /* Add a mouse pointer on hover */
+  background-color: white;
+  border: .5px solid white;
+  border-radius: 25px;
 }
 
 #scrollBtn:hover {

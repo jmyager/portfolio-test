@@ -4,6 +4,8 @@ $("a").on("click", function () {
     $("#portfolio", "#about").show();
 })
 
+$('#scrollBtn').hide();
+
 // Scroll on anchor click
 $(document).ready(function () {
     // Add smooth scrolling to all links
