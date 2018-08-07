@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md bg-white justify-content-center">
         <a href="/" class="navbar-brand mr-0">
-            <img src="assets/images/logo.png" href="/" height="48">
+            <img src="assets/images/logo.png" height="48" alt="logo image">
         </a>
         <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 
@@ -55,7 +55,7 @@
             </h1>
             <p class="lead">I code clean and elegant designs, and I love what I do.</p>
             <p class="lead">
-                <img class="profilePic" src="assets/images/profile.jpg">
+                <img class="profilePic" src="assets/images/profile.jpg" alt="profile image">
             </p>
         </div>
     </div>
@@ -238,8 +238,8 @@
             </div>
         </div>
 
-        <a target="_blank" href="https://github.com/jmyager">
-            <button class="btn btn-lg btn-outline-primary roundButton">See more on Github</button>
+        <a class="btn btn-lg btn-outline-primary roundButton" target="_blank" href="https://github.com/jmyager">
+            See more on github
         </a>
 
     </div>
@@ -287,7 +287,7 @@
         </h2>
         <p class="bodyText">People I've worked with have said some nice things...</p>
         <br>
-        <img class="profilePic testimonialPhoto" src="assets/images/niharProfile.jpg">
+        <img class="profilePic testimonialPhoto" src="assets/images/niharProfile.jpg" alt="testimonial image">
         <h5>
             <i>"Josh was a real pleasure to work with and we look forward to working with him again. He’s the kind of designer
                 you can trust with a project from start to finish."</i>
@@ -327,16 +327,16 @@
                     <div class="modal-body">
                         <form action="https://formspree.io/joshmyager@gmail.com" method="POST">
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="John Smith">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="John Smith">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Email</label>
-                                <input type="email" name="_replyto" class="form-control" placeholder="JohnSmith@gmail.com">
+                                <label for="email">Email</label>
+                                <input type="email" name="_replyto" id="email" class="form-control" placeholder="JohnSmith@gmail.com">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Message</label>
-                                <textarea class="form-control" type="text" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                             </div>
                             <button type="submit" value="Send" class="btn btn-lg btn-outline-primary roundButton mb-2">Submit</button>
                         </form>
@@ -346,24 +346,18 @@
         </div>
 
         <div class="footerBody container text-center">
-            <img class="footerItem" src="assets/images/logo.png" height="100">
+            <img class="footerItem" src="assets/images/logo.png" height="100" alt="logo image">
             <h4>Living, learning, and leveling up</h4>
             <h4 class="footerItem">one day at a time.</h4>
-            <button class="btn btn-sm btn-outline-primary circleIcon">
-                <a href="https://github.com/jmyager">
-                    <i class="fab fa-github"></i>
-                </a>
-            </button>
-            <button class="btn btn-sm btn-outline-primary circleIcon">
-                    <a href="https://linkedin.com/li/jmyager">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-            </button>
-            <button class="btn btn-sm btn-outline-primary circleIcon">
-                    <a href="https://angel.co/jmyager">
-                        <i class="fab fa-angellist"></i>
-                    </a>
-            </button>
+            <a class="btn btn-sm btn-outline-primary circleIcon" href="https://github.com/jmyager">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn btn-sm btn-outline-primary circleIcon" href="https://linkedin.com/li/jmyager">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn btn-sm btn-outline-primary circleIcon" href="https://angel.co/jmyager">
+                <i class="fab fa-angellist"></i>
+            </a>
             <p class="handcrafted">Handcrafted by me</p>
             <p>Made with Bootstrap</p>
         </div>
