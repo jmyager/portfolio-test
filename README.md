@@ -1,6 +1,6 @@
 # Josh Yager - Designer and Full Stack Developer
 
-[View Here](www.JoshYager.com)
+[View Here](http://www.joshyager.com)
 
 
 ## About Josh
