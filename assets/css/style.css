@@ -12,6 +12,10 @@ img {
     object-fit: cover;
 }
 
+.logo {
+  height: 80px;
+}
+
 .headerText {
   margin-top: 5%;
   padding-bottom: 2%;
