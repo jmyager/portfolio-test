@@ -33,17 +33,33 @@ $(document).ready(function () {
 });
 
 // When the user scrolls down 20px from the top of the document, show the button
-    //Check to see if the window is top if not then display button
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 500) {
-            $('#scrollBtn').fadeIn();
-        } else {
-            $('#scrollBtn').fadeOut();
-        }
-    });
+//Check to see if the window is top if not then display button
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+        $('#scrollBtn').fadeIn();
+    } else {
+        $('#scrollBtn').fadeOut();
+    }
+});
 
-    //Click event to scroll to top
-    $('#scrollBtn').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
+// Click event to scroll to top
+$('#scrollBtn').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 800);
+    return false;
+});
+
+$(".projectLink").on("click", function() {
+    $("#demoBtn").attr(
+        "href",
+        $(this).attr("data-demo") 
+    );
+    $("#githubBtn").attr(
+        "href",
+        $(this).attr("data-github")
+    )
+
+    $(".projectModal").modal("show");
+})
+
+
+

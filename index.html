@@ -147,17 +147,34 @@
     <div id="portfolio">
         <h2 class="headerText">
             <b>My Recent Work</b>
+            
         </h2>
+
         <p>Here are a few recent design projects. Want to see more?
             <a href="3" data-toggle="modal" data-target="#exampleModal" style="color:#0066ff">Contact me.</a>
         </p>
+
+
+
+        <!-- Project Modal -->
+        <div class="modal fade projectModal" id="projectModal" role="dialog">
+          <div class="modal-dialog modal-dialog-centered">
+            <!-- Modal content-->
+            <div class="modal-content modal-transparent">
+              <div class="modal-body modal-transparent">
+                  <a class="btn btn-light btn-lg btn-outline" id="demoBtn" target="_blank" href="">Demo</a>
+                  <a class="btn btn-light btn-lg btn-outline" id="githubBtn" target="_blank" href="">Github</a>
+              </div>
+            </div> 
+          </div>
+        </div>
 
 
         <div class="portfolioGrid">
             <div class="row">
                 <div class="grid">
                     <figure class="effect-julia">
-                        <img src="assets/images/popin.png" alt="poppin app project thumbnail" />
+                        <img src="assets/images/popin.png" alt="poppin app project thumbnail"/>
                         <figcaption>
                             <h2>Popin</h2>
                             <div>
@@ -168,11 +185,11 @@
                                 <p>APIs</p>
                                 <p>React-Router</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/Poppin">View more</a>
+                            <a class="projectLink" data-demo="https://frozen-bastion-62666.herokuapp.com/" data-github="https://github.com/jmyager/Popin">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
-                        <img src="assets/images/buzz'd.png" alt="buzz'd app project thumbnail" />
+                        <img src="assets/images/buzz'd.png" alt="buzz'd app project thumbnail"/>
                         <figcaption>
                             <h2>Buzz'd</h2>
                             <div>
@@ -185,7 +202,7 @@
                                 <p>Express</p>
                                 <p>Sequelize</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/Buzz-d">View more</a>
+                            <a class="projectLink" data-demo="https://fathomless-depths-99227.herokuapp.com/" data-github="https://github.com/jmyager/Buzz-d">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
@@ -200,7 +217,7 @@
                                 <p>HTML</p>
                                 <p>CSS</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/ImprompTo">View more</a>
+                            <a class="projectLink" data-demo="https://shreedamin.github.io/imprompto/" data-github="https://github.com/jmyager/ImprompTo">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
@@ -214,7 +231,7 @@
                                 <p>HTML</p>
                                 <p>CSS</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/MemoryGame">View more</a>
+                            <a class="projectLink" data-demo="https://fathomless-mountain-34042.herokuapp.com/" data-github="https://github.com/jmyager/MemoryGame">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
@@ -227,7 +244,7 @@
                                 <p>Bootstrap</p>
                                 <p>Javascript</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/Train-Schedule">View more</a>
+                            <a class="projectLink" data-demo="http://www.joshyager.com/Train-Schedule/" data-github="https://github.com/jmyager/Train-Schedule">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
@@ -243,7 +260,7 @@
                                 <p>HTML</p>
                                 <p>CSS</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/TriviaGame">View more</a>
+                            <a class="projectLink" data-demo="http://www.joshyager.com/TriviaGame/" data-github="https://github.com/jmyager/TriviaGame">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
@@ -258,7 +275,7 @@
                                 <p>JQuery</p>
                                 <p>HTML</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/GiphyApp">View more</a>
+                            <a class="projectLink" data-demo="http://www.joshyager.com/GiphyApp/" data-github="https://github.com/jmyager/GiphyApp">View more</a>
                         </figcaption>
                     </figure>
                     <figure class="effect-julia">
@@ -270,7 +287,7 @@
                                 <p>MySQL</p>
                                 <p>Javascript</p>
                             </div>
-                            <a target="_blank" href="https://github.com/jmyager/Bamazon_app">View more</a>
+                            <a class="projectLink" data-demo="https://raw.githubusercontent.com/jmyager/Bamazon_app/master/images/bamazonCustomer.gif" data-github="https://github.com/jmyager/Bamazon_app">View more</a>
                         </figcaption>
                     </figure>
                 </div>

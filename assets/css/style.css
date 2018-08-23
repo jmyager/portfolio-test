@@ -6,6 +6,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  position: relative;
 }
 
 img {
@@ -122,6 +123,25 @@ a:hover {
   height: 300px;
 }
 
+
+.modal-transparent {
+  background-color: rgb(0,0,0,0);
+  border: rgb(0,0,0,0);
+  padding: 0;
+  width: 250px;
+  margin: auto;
+}
+
+.btn-outline {
+  border: .5px solid #0066ff;
+  margin: 10px;
+}
+
+.btn-outline:hover {
+  color: white;
+  background-color: #0066ff;
+  border: white;
+}
 
 .portfolioBtn {
   position: absolute;
@@ -296,7 +316,7 @@ a:hover {
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 1; /* Make sure it does not overlap */
-  color: rgb(0, 102, 255); /* Set a background color */
+  color: #0066ff; /* Set a background color */
   cursor: pointer; /* Add a mouse pointer on hover */
   background-color: white;
   border: .5px solid white;
@@ -304,6 +324,15 @@ a:hover {
 }
 
 #scrollBtn:hover {
-  color: rgb(0, 102, 255);
-  transition: color .5s ease-in
+  color: white;
+  border-color: #0066ff;
+  background-color: #0066ff;
+  transition: color .25s ease-in
+}
+
+.blur {
+  box-shadow: 0px 0px 20px 20px rgba(255,255,255,1);
+  text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+  transform: scale(0.9);
+  opacity: 0.6;
 }
