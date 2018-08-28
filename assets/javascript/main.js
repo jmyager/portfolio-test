@@ -61,5 +61,15 @@ $(".projectLink").on("click", function() {
     $(".projectModal").modal("show");
 })
 
+$(function () {
+    $('.projectModal').on('show.bs.modal', function () {
+        $('.portfolioGrid').addClass('blur');
+    });
+
+    $('.projectModal').on('hide.bs.modal', function () {
+        $('.portfolioGrid').removeClass('blur');
+    });
+});
+
 
 

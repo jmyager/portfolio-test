@@ -335,4 +335,5 @@ a:hover {
   text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
   transform: scale(0.9);
   opacity: 0.6;
+  transition: .25s;
 }
