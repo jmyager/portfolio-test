@@ -102,7 +102,12 @@ img {
 
 .skillCardSub {
   color: #0066ff;
-  padding-top: 10%;
+  /* padding-top: 10%; */
+}
+
+.skill-card-para {
+  height: 150px;
+  padding-bottom: 25px;
 }
 
 
