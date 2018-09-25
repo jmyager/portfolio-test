@@ -76,6 +76,17 @@ img {
   padding: 5% 20% 18% 20%;
 }
 
+.btn-resume {
+  color: white;
+  border-color: white;
+}
+
+.btn-resume:hover {
+  background-color: white;
+  color: #0066ff;
+  border-color: white;
+}
+
 .skillCards {
   margin-top: -10%;
 }
