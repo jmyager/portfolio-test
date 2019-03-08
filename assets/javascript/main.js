@@ -1,13 +1,17 @@
-$("#portfolio", "#about").hide();
 
-$("a").on("click", function () {
-    $("#portfolio", "#about").show();
-})
-
-$('#scrollBtn').hide();
-
-// Scroll on anchor click
 $(document).ready(function () {
+
+    $("#portfolio", "#about").hide();
+
+    $("a").on("click", function () {
+        $("#portfolio", "#about").show();
+    })
+
+    $('#scrollBtn').hide();
+
+
+    // Scroll on anchor click
+
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
 
@@ -30,151 +34,148 @@ $(document).ready(function () {
             });
         } // End if
     });
-});
 
-// When the user scrolls down 20px from the top of the document, show the button
-//Check to see if the window is top if not then display button
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 500) {
-        $('#scrollBtn').fadeIn();
-    } else {
-        $('#scrollBtn').fadeOut();
-    }
-});
 
-// Click event to scroll to top
-$('#scrollBtn').click(function () {
-    $('html, body').animate({ scrollTop: 0 }, 800);
-    return false;
-});
-
-$(".projectLink").on("click", function () {
-    $("#demoBtn").attr(
-        "href",
-        $(this).attr("data-demo")
-    );
-    $("#githubBtn").attr(
-        "href",
-        $(this).attr("data-github")
-    )
-
-    $(".projectModal").modal("show");
-})
-
-$(function () {
-    $('.projectModal').on('show.bs.modal', function () {
-        $('.portfolioGrid').addClass('blur');
+    // When the user scrolls down 20px from the top of the document, show the button
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $('#scrollBtn').fadeIn();
+        } else {
+            $('#scrollBtn').fadeOut();
+        }
     });
 
-    $('.projectModal').on('hide.bs.modal', function () {
-        $('.portfolioGrid').removeClass('blur');
+    // Click event to scroll to top
+    $('#scrollBtn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
     });
-});
 
+    $(".projectLink").on("click", function () {
+        $("#demoBtn").attr(
+            "href",
+            $(this).attr("data-demo")
+        );
+        $("#githubBtn").attr(
+            "href",
+            $(this).attr("data-github")
+        )
 
-const projects = [
-    {
-        name: 'Popin',
-        tags: ['React', 'Express', 'MongoDB', 'APIs', 'React-Router'],
-        imgSrc: 'assets/images/popin.png',
-        imgAlt: 'poppin app project thumbnail',
-        demoUrl: 'https://frozen-bastion-62666.herokuapp.com/',
-        gitUrl: 'https://github.com/jmyager/Popin'
-    },
-    {
-        name: "Buzz'd",
-        tags: ['JavaScript', 'jQuery', 'Hammerjs', 'Materialize', 'MySql', 'Express', 'Sequelize'],
-        imgSrc: 'assets/images/buzzd.png',
-        imgAlt: 'buzzd app project thumbnail',
-        demoUrl: 'https://fathomless-depths-99227.herokuapp.com/',
-        gitUrl: 'https://github.com/jmyager/Buzz-d'
-    },
-    {
-        name: 'Imprompto',
-        tags: ['JavaScript', 'jQuery', 'APIs', 'HTML', 'CSS'],
-        imgSrc: 'assets/images/imprompto.png',
-        imgAlt: 'imprompto app project thumbnail',
-        demoUrl: 'https://shreedamin.github.io/imprompto/',
-        gitUrl: 'https://github.com/jmyager/ImprompTo'
-    },
-    {
-        name: 'Memory Game',
-        tags: ['React', 'JavaScript', 'HTML', 'CSS'],
-        imgSrc: 'assets/images/memory-game.png',
-        imgAlt: 'memory game project thumbnail',
-        demoUrl: 'https://fathomless-mountain-34042.herokuapp.com/',
-        gitUrl: 'https://github.com/jmyager/MemoryGame'
-    },
-    {
-        name: 'Train Schedule',
-        tags: ['Firebase', 'jQuery', 'Bootstrap', 'JavaScript'],
-        imgSrc: 'assets/images/train-schedule.png',
-        imgAlt: 'train schedule project thumbnail',
-        demoUrl: 'http://www.joshyager.com/Train-Schedule/',
-        gitUrl: 'https://github.com/jmyager/Train-Schedule'
-    },
-    {
-        name: 'Trivia Game',
-        tags: ['JavaScript', 'JS Timers', 'JS Functions', 'Bootstrap', 'HTML', 'CSS'],
-        imgSrc: 'assets/images/trivia-game.png',
-        imgAlt: 'trivia game project thumbnail',
-        demoUrl: 'http://www.joshyager.com/TriviaGame/',
-        gitUrl: 'https://github.com/jmyager/TriviaGame'
-    },
-    {
-        name: 'Bamazon',
-        tags: ['Node.js', 'MySql', 'JavaScript'],
-        imgSrc: 'assets/images/bamazon.png',
-        imgAlt: 'bamazon app project thumbnail',
-        demoUrl: 'https://raw.githubusercontent.com/jmyager/Bamazon_app/master/images/bamazonCustomer.gif',
-        gitUrl: 'https://github.com/jmyager/Bamazon_app'
-    }
-]
-
-
-
-// Filter button functions //
-// ======================= //
-$("ul").on("click", "button", function (event) {
-    // counter for project animation
-    let counter = 7;
-    // array to hold newly filtered projects
-    let filteredProjects = [];
-    // remove active class from focused button
-    $('ul').find('button.filter-active').removeClass()
-    // find target that was clicked
-    let target = $(event.target);
-    // pull filter data value of target
-    let filter = $(event.target).data("filter");
-    // add active class to parent button (li was clicked)
-    target.parent('button').addClass("filter-active");
-    // filter all projects based on filter value
-    if (filter === "All") {
-        filteredProjects = projects;
-    }
-    else {
-    filteredProjects = projects.filter(e => e.tags.includes(filter));
-    }
-    // fade out and remove all current projects
-    // $("figure").each(function(index) {
-    //     $(this).delay(200*index).fadeOut(100);
-    // });
-    $('figure').each(function(index) {
-        $(this).fadeOut(200).remove();
+        $(".projectModal").modal("show");
     })
-    // create template to hold project html
-    let projectTemplate = [];
-    // loop through filtered projects and add to template
-    filteredProjects.forEach(function (project) {
-        // loop through our tags and create template html
-        let tags = '';
-        project.tags.forEach(function (tag) {
-            tags+=`
+
+    $(function () {
+        $('.projectModal').on('show.bs.modal', function () {
+            $('.portfolioGrid').addClass('blur');
+        });
+
+        $('.projectModal').on('hide.bs.modal', function () {
+            $('.portfolioGrid').removeClass('blur');
+        });
+    });
+
+
+    const projects = [
+        {
+            name: 'BassSavvy',
+            tags: ['Freelance', 'Node.js', 'Express', 'JavaScript', 'APIs', 'Fullstack',],
+            filters: ['JavaScript', 'jQuery', 'Node.js', 'Freelance', 'Frontend', 'Backend', 'Fullstack', 'APIs', 'Express'],
+            imgSrc: 'assets/images/basssavvy.png',
+            imgAlt: 'BassSavvy project thumbnail',
+            demoUrl: 'http://www.basssavvy.com/',
+            gitUrl: 'https://github.com/jmyager/Levels'
+        },
+        {
+            name: 'MySuperTrainer',
+            tags: ['Freelance', 'Frontend', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'],
+            filters: ['Freelance', 'Frontend', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'],
+            imgSrc: 'assets/images/mysupertrainer.png',
+            imgAlt: 'MySuperTrainer project thumbnail',
+            demoUrl: 'http://www.mysupertrainer.com/',
+            gitUrl: 'https://github.com/jmyager/mySuperTrainer'
+        },
+        {
+            name: 'Popin',
+            tags: ['React', 'Express', 'MongoDB', 'APIs', 'React-Router'],
+            filters: ['React', 'Express', 'MongoDB', 'APIs', 'Fullstack'],
+            imgSrc: 'assets/images/popin.png',
+            imgAlt: 'poppin app project thumbnail',
+            demoUrl: 'https://frozen-bastion-62666.herokuapp.com/',
+            gitUrl: 'https://github.com/jmyager/Popin'
+        },
+        {
+            name: "Buzz'd",
+            tags: ['JavaScript', 'jQuery', 'Hammerjs', 'Materialize', 'MySql', 'Express', 'Sequelize'],
+            filters: ['JavaScript', 'jQuery', 'Frontend', 'MySql', 'Express'],
+            imgSrc: 'assets/images/buzzd.png',
+            imgAlt: 'buzzd app project thumbnail',
+            demoUrl: 'https://fathomless-depths-99227.herokuapp.com/',
+            gitUrl: 'https://github.com/jmyager/Buzz-d'
+        },
+        {
+            name: 'Imprompto',
+            tags: ['JavaScript', 'jQuery', 'APIs', 'HTML', 'CSS'],
+            filters: ['JavaScript', 'jQuery', 'APIs', 'Frontend'],
+            imgSrc: 'assets/images/imprompto.png',
+            imgAlt: 'imprompto app project thumbnail',
+            demoUrl: 'https://shreedamin.github.io/imprompto/',
+            gitUrl: 'https://github.com/jmyager/ImprompTo'
+        },
+        {
+            name: 'Memory Game',
+            tags: ['React', 'JavaScript', 'HTML', 'CSS'],
+            filters: ['React', 'JavaScript'],
+            imgSrc: 'assets/images/memory-game.png',
+            imgAlt: 'memory game project thumbnail',
+            demoUrl: 'https://fathomless-mountain-34042.herokuapp.com/',
+            gitUrl: 'https://github.com/jmyager/MemoryGame'
+        },
+        {
+            name: 'Train Schedule',
+            tags: ['Firebase', 'jQuery', 'Bootstrap', 'JavaScript'],
+            filters: ['Firebase', 'jQuery', 'Bootstrap', 'JavaScript'],
+            imgSrc: 'assets/images/train-schedule.png',
+            imgAlt: 'train schedule project thumbnail',
+            demoUrl: 'http://www.joshyager.com/Train-Schedule/',
+            gitUrl: 'https://github.com/jmyager/Train-Schedule'
+        },
+        {
+            name: 'Trivia Game',
+            tags: ['JavaScript', 'JS Timers', 'JS Functions', 'Bootstrap', 'HTML', 'CSS'],
+            filters: ['JavaScript', 'Bootstrap'],
+            imgSrc: 'assets/images/trivia-game.png',
+            imgAlt: 'trivia game project thumbnail',
+            demoUrl: 'http://www.joshyager.com/TriviaGame/',
+            gitUrl: 'https://github.com/jmyager/TriviaGame'
+        },
+        {
+            name: 'Bamazon',
+            tags: ['Node.js', 'MySql', 'JavaScript'],
+            filters: ['Node.js', 'MySql', 'JavaScript'],
+            imgSrc: 'assets/images/bamazon.png',
+            imgAlt: 'bamazon app project thumbnail',
+            demoUrl: 'https://raw.githubusercontent.com/jmyager/Bamazon_app/master/images/bamazonCustomer.gif',
+            gitUrl: 'https://github.com/jmyager/Bamazon_app'
+        }
+    ]
+
+
+    // Function to append projects to page
+    function appendProjects(projectBatch) {
+        // create template to hold project html
+        let projectTemplate = [];
+        // loop through filtered projects and add to template
+        projectBatch.forEach(function (project) {
+            // loop through our tags and create template html
+            let tags = '';
+            project.tags.forEach(function (tag) {
+                tags += `
                 <p>${tag}</p>
             `;
-        })
-        // add to project template html
-        projectTemplate.push(`
+            })
+            // add to project template html
+            projectTemplate.push(`
         <figure class="effect-julia">
                         <img src=${project.imgSrc} alt=${project.imgAlt} />
                         <figcaption>
@@ -189,24 +190,55 @@ $("ul").on("click", "button", function (event) {
                         </figcaption>
                     </figure>
         `);
-    })
-    projectTemplate.forEach(function (project) {
-            $('#projectWell').append(project);
-            $('figure').delay(400*project).fadeIn(300);
-   
-        // $('#projectWell').append(project);
-    })
-    // $('#projectWell').delay(200000).hide(0);
-    // $('#projectWell').append(projectTemplate);
-    // $('#projectWell').delay(2000).fadeIn(200);
-    // $('#projectTemplate').child('figure').hide();
-    // $('#projectWell').show();
-    // console.log(projectTemplate);
-    // $('figure').each(function(index) {
-    //     $(this).delay(400*index).fadeIn(300);
-    // });
-})
+        })
+
+        // fade out and remove all current projects
+        $("figure").fadeOut(100, function () {
+            // remove all current figures
+            console.log(this);
+            $(this).remove();
+        });
+        setTimeout(appendNewProjects, 300)
+
+        function appendNewProjects() {
+            // loop through template and append new projects
+            projectTemplate.forEach(function (project) {
+                console.log(project);
+                $(project).hide().appendTo('#projectWell').fadeIn(1000);
+            });
+        }
+
+    }
+
+
+    // Run function to append all project when page initially loads
+    appendProjects(projects);
 
 
 
 
+    // Filter button functions //
+    // ======================= //
+    $("ul").on("click", "button", function (event) {
+        // array to hold newly filtered projects
+        let filteredProjects = [];
+        // remove active class from focused button
+        $('ul').find('button.filter-active').removeClass()
+        // find target that was clicked
+        let target = $(event.target);
+        // pull filter data value of target
+        let filter = $(event.target).data("filter");
+        // add active class to parent button (li was clicked)
+        target.parent('button').addClass("filter-active");
+        // filter all projects based on filter value
+        if (filter === "All") {
+            filteredProjects = projects;
+        }
+        else {
+            filteredProjects = projects.filter(e => e.filters.includes(filter));
+        }
+        appendProjects(filteredProjects);
+    });
+
+
+});

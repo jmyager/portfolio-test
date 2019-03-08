@@ -250,9 +250,11 @@ nav {
   background-color: white;
   background-color: hsl(210, 20%, 95%);
   width: 100%;
+  min-height: 1000px;
   height: auto;
   padding: 96px 0px 160px;
   text-align: center;
+  position: relative;
 }
 
 .filter-box {
@@ -323,6 +325,13 @@ nav {
 
 .filter-active li {
   color: white;
+}
+
+.git-btn-wrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 126px;
+  height: auto;
 }
 
 

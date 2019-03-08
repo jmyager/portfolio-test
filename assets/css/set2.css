@@ -6,6 +6,10 @@
 	max-width: 1000px;
 	list-style: none;
 	text-align: center;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 /* Common style */
@@ -31,7 +35,6 @@
 	position: relative;
 	float: left;
 	overflow: hidden;
-	margin: 10px 1%;
 	margin-left: 7%;
 	margin-right: -2%;
 	min-width: 320px;
@@ -43,6 +46,13 @@
 	text-align: center;
 	cursor: pointer;
 	border-radius: 2%;
+	flex: 0 1 98%;
+	margin: 1%;
+}
+
+.grid figcaption div {
+	width: 75%;
+	margin-left: 15%;
 }
 
 .grid figure img {
