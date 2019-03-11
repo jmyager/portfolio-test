@@ -103,33 +103,29 @@ nav {
 
 /* Hero Styles */
 /* =========== */
-#hero:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: -40%;
-  top: 0;
+#hero {
   background: url("../images/hero.JPG") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 140%;
-  height: 100%;
-  z-index: -10;
-}
-
-#hero div {
-  color: white;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.38);
+  background-position-x: 65%;
   width: 100%;
-  margin-top: 25%;
-  margin-left: 8%;
+  height: auto;
+  color: white;
 }
 
-#hero div i {
-  margin-top: 45vh;
-  margin-left: 37vw;
+.hero-content {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.38);
+  width: 95%;
+  min-height: 75vh;
+  margin-top: 25%;
+  margin-left: 5%;
+  text-align: left;
+}
+
+.hero-content h2 {
+  width: 80%;
 }
 
 .overlay {
@@ -142,6 +138,15 @@ nav {
   overflow: auto;
   z-index: -99;
 }
+
+.arrow-wrapper {
+  width: 100%;
+  height: 25px;
+  margin-top: 15vh;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
 
 
 
@@ -453,10 +458,14 @@ footer p {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 480px) {
-  #hero div {
+  .hero-content {
     width: 70%;
     margin-top: 20%;
     margin-left: 5%;
+  }
+
+  .hero-content i {
+    margin-left: 28%;
   }
 
   .skill-tile {
@@ -475,16 +484,20 @@ footer p {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 576px) {
-  #hero:before {
-    left: -30%;
-    width: 130%;
+
+  .hero-content {
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 10%;
+    text-align: left;
   }
 
-  #hero div {
-    width: 58%;
-    margin-top: 20%;
-    margin-left: 5%;
-    text-align: left;
+  .hero-content h2 {
+    width: 100%;
+  }
+
+  .hero-content i {
+    width: 100%;
   }
 
   .skill-tile {
@@ -498,12 +511,9 @@ footer p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  #hero:before {
-    left: -20%;
-    width: 120%;
-  }
+  
 
-  #hero div {
+  .hero-content {
     margin-top: 15%;
     margin-left: 10%;
     width: 56%;
@@ -532,11 +542,17 @@ footer p {
     overflow: auto;
   }
 
-  #hero div {
+  .hero-content {
     width: 62%;
+    min-height: 50%;
+    height:70%;
     margin-top: 25vh;
     margin-left: 12vw;
     text-align: left;
+  }
+
+  .arrow-wrapper {
+    margin-top: 0;
   }
   
   #skills {
