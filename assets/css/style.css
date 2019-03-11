@@ -110,6 +110,7 @@ nav {
   -o-background-size: cover;
   background-size: cover;
   background-position-x: 65%;
+  background-attachment: scroll;
   width: 100%;
   height: auto;
   color: white;
@@ -117,10 +118,8 @@ nav {
 
 .hero-content {
   text-shadow: 0 1px 2px rgba(0,0,0,0.38);
-  width: 95%;
-  min-height: 75vh;
-  margin-top: 25%;
-  margin-left: 5%;
+  width: 100%;
+  height: auto;
   text-align: left;
 }
 
@@ -132,18 +131,20 @@ nav {
   background: -webkit-linear-gradient(to right, rgba(38,97,156,.8), rgba(38,97,156,0));
   background: linear-gradient(to right, rgba(38,97,156,.8), rgba(38,97,156,0));
   background: linear-gradient(to right,  rgba(38,97,156,.9), rgba(38,97,156,0));
-  width: 100%!important;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0px 0px!important;
+  padding-top: 100px;
+  padding-left: 5%;
   overflow: auto;
-  z-index: -99;
+  background-attachment: fixed;
 }
 
 .arrow-wrapper {
-  width: 100%;
+  width: 105%;
   height: 25px;
-  margin-top: 15vh;
-  margin-bottom: 2%;
+  margin-top: 220px;
+  margin-left: -5%;
   text-align: center;
 }
 
@@ -339,6 +340,34 @@ nav {
   height: auto;
 }
 
+.project-anchor-left, .project-anchor-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding-top: 25%;
+  background: rgba(11,29,46,0.5);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.38);
+}
+
+.project-anchor-left:hover {
+  background: -webkit-linear-gradient(to right, rgba(11,29,46,0.5), rgba(189,207,225,0.5));
+  background: linear-gradient(to right, rgba(11,29,46,0.5), rgba(189,207,225,0.5));
+  background: linear-gradient(to right,  rgba(11,29,46,0.5), rgba(189,207,225,0.5));
+}
+
+.project-anchor-right:hover {
+    background: -webkit-linear-gradient(to left, rgba(11,29,46,0.5), rgba(189,207,225,0.5));
+    background: linear-gradient(to left, rgba(11,29,46,0.5), rgba(189,207,225,0.5));
+    background: linear-gradient(to left,  rgba(11,29,46,0.5), rgba(189,207,225,0.5));
+}
+
+.project-anchor-right {
+  left: 50%;
+}
+
 
 
 /* Footer Styles */
@@ -456,17 +485,33 @@ footer p {
 /* Responsive Styles /*
 /* ================= /*
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-width: 480px) {
-  .hero-content {
-    width: 70%;
-    margin-top: 20%;
-    margin-left: 5%;
+/* Extra Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 320px) {
+  .overlay {
+    padding-left: 2%;
   }
 
-  .hero-content i {
-    margin-left: 28%;
+  .hero-content {
+    width: 98%;
   }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 480px) {
+  .overlay {
+    padding-left: 10%;
+  }
+
+  .hero-content {
+    width: 70%;
+  }
+
+  .arrow-wrapper {
+    margin-top: 40%;
+    margin-left: -12%;
+    width: 112%;
+  }
+  
 
   .skill-tile {
     padding: 32px;
@@ -484,21 +529,17 @@ footer p {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 576px) {
-
   .hero-content {
-    width: 60%;
-    margin-top: 20%;
-    margin-left: 10%;
-    text-align: left;
+    width: 65%;
   }
 
   .hero-content h2 {
     width: 100%;
   }
 
-  .hero-content i {
-    width: 100%;
-  }
+ .arrow-wrapper {
+   margin-top: 35%;
+ }
 
   .skill-tile {
     padding: 48px;
@@ -511,12 +552,8 @@ footer p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
-
-  .hero-content {
-    margin-top: 15%;
-    margin-left: 10%;
-    width: 56%;
+  .arrow-wrapper {
+    margin-top: 32%;
   }
 
   #skills {
@@ -537,22 +574,20 @@ footer p {
 @media only screen and (min-width: 992px) {
   #hero {
     height: 100vh;
-    width: 100%;
     background-attachment: fixed;
-    overflow: auto;
+    overflow: hidden;
+    /* Create the parallax scrolling effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  .hero-content {
-    width: 62%;
-    min-height: 50%;
-    height:70%;
-    margin-top: 25vh;
-    margin-left: 12vw;
-    text-align: left;
+  .overlay {
+    padding-top: 150px;
   }
 
   .arrow-wrapper {
-    margin-top: 0;
+    margin-top: 25%;
   }
   
   #skills {

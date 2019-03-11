@@ -76,9 +76,9 @@
 .grid figure figcaption::after {
 	pointer-events: none;
 }
-
-.grid figure figcaption,
-.grid figure figcaption > a {
+/* This was by default: 
+.grid figure ficaption, .grid figure figcaption > a {} */
+.grid figure figcaption {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -88,13 +88,13 @@
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption > a {
+/* .grid figure figcaption > a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
 	font-size: 0;
 	opacity: 0;
-}
+} */
 
 .grid figure h2 {
 	word-spacing: -0.10em;

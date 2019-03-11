@@ -98,7 +98,7 @@ $(document).ready(function () {
         {
             name: 'Popin',
             tags: ['React', 'Express', 'MongoDB', 'APIs', 'React-Router'],
-            filters: ['React', 'Express', 'MongoDB', 'APIs', 'Fullstack'],
+            filters: ['React', 'Express', 'MongoDB', 'APIs', 'Fullstack', 'Backend'],
             imgSrc: 'assets/images/popin.png',
             imgAlt: 'poppin app project thumbnail',
             demoUrl: 'https://frozen-bastion-62666.herokuapp.com/',
@@ -178,15 +178,12 @@ $(document).ready(function () {
             projectTemplate.push(`
         <figure class="effect-julia">
                         <img src=${project.imgSrc} alt=${project.imgAlt} />
-                        <figcaption>
+                        <figcaption data-demo=${project.demoUrl} data-git=${project.gitUrl}>
                             <h2>${project.name}</h2>
                             <div>
                                 ${tags}
                             </div>
-                            <a class="projectLink" data-demo=${project.demoUrl}
-                                data-github=${project.gitUrl}>View
-                                more
-                            </a>
+                            
                         </figcaption>
                     </figure>
         `);
@@ -195,15 +192,14 @@ $(document).ready(function () {
         // fade out and remove all current projects
         $("figure").fadeOut(100, function () {
             // remove all current figures
-            console.log(this);
             $(this).remove();
         });
         setTimeout(appendNewProjects, 300)
 
         function appendNewProjects() {
+            console.log(projectTemplate);
             // loop through template and append new projects
             projectTemplate.forEach(function (project) {
-                console.log(project);
                 $(project).hide().appendTo('#projectWell').fadeIn(1000);
             });
         }
@@ -219,17 +215,15 @@ $(document).ready(function () {
 
     // Filter button functions //
     // ======================= //
-    $("ul").on("click", "button", function (event) {
+    $("ul").on("click", "button", function () {
         // array to hold newly filtered projects
         let filteredProjects = [];
         // remove active class from focused button
         $('ul').find('button.filter-active').removeClass()
-        // find target that was clicked
-        let target = $(event.target);
-        // pull filter data value of target
-        let filter = $(event.target).data("filter");
+        // pull filter data value of the li inside the button
+        var filter = $(this).children('li').data('filter');
         // add active class to parent button (li was clicked)
-        target.parent('button').addClass("filter-active");
+        $(this).addClass('filter-active');
         // filter all projects based on filter value
         if (filter === "All") {
             filteredProjects = projects;
@@ -239,6 +233,26 @@ $(document).ready(function () {
         }
         appendProjects(filteredProjects);
     });
+
+
+    // if project is clicked
+    $('body').on('click', 'figure', function () {
+        // show any previously hidden content and remove any project anchors
+        $('.project-anchor-left').remove();
+        $('.project-anchor-right').remove();
+        $('figcaption').children('div').show();
+        // pull data from figcaption for project urls
+        let demoUrl = $(this).children('figcaption').data('demo');
+        let gitUrl = $(this).children('figcaption').data('git');
+        // hide project contents
+        $(this).children('figcaption').children('div').hide();
+        // append project anchors to figcaption
+        $(this).children('figcaption').append(`
+            <a href=${demoUrl} target="_blank" class="project-anchor-left"><h6>Demo</h6></a>
+            <a href=${gitUrl} target="_blank" class="project-anchor-right"><h6>Github</h6></a>
+        `)
+    })
+
 
 
 });
