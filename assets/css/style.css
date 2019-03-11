@@ -132,7 +132,7 @@ nav {
   background: linear-gradient(to right, rgba(38,97,156,.8), rgba(38,97,156,0.3), rgba(38,97,156,0));
   background: linear-gradient(to right,  rgba(38,97,156,.8), rgba(38,97,156,0.3), rgba(38,97,156,0));
   width: 100vw;
-  height: 100vh;
+  height: auto;
   margin: 0px 0px!important;
   padding-top: 100px;
   padding-left: 5%;
@@ -584,6 +584,7 @@ footer p {
 
   .overlay {
     padding-top: 150px;
+    height: 100vh;
   }
 
   .arrow-wrapper {
@@ -619,3 +620,10 @@ footer p {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1200px) {...} */
+
+/* Microsoft and Edge Browser */
+@supports (-ms-ime-align:auto) {
+  #hero {
+      background-attachment: scroll;
+  }
+}
