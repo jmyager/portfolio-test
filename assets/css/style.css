@@ -83,6 +83,7 @@ nav {
   height: 100px;
   margin-bottom: -100px;
   color: white;
+  z-index: 10;
 }
 
 .logo {
@@ -112,7 +113,7 @@ nav {
   background-position-x: 65%;
   background-attachment: scroll;
   width: 100%;
-  height: auto;
+  height: 100vh;
   color: white;
 }
 
@@ -121,6 +122,7 @@ nav {
   width: 100%;
   height: auto;
   text-align: left;
+  z-index: 10;
 }
 
 .hero-content h2 {
@@ -132,22 +134,22 @@ nav {
   background: linear-gradient(to right, rgba(38,97,156,.8), rgba(38,97,156,0.3), rgba(38,97,156,0));
   background: linear-gradient(to right,  rgba(38,97,156,.8), rgba(38,97,156,0.3), rgba(38,97,156,0));
   width: 100vw;
-  height: auto;
+  height: 100%;
   margin: 0px 0px!important;
   padding-top: 100px;
   padding-left: 5%;
   overflow: auto;
   background-attachment: fixed;
+  position: relative;
 }
 
 .arrow-wrapper {
-  width: 105%;
-  height: 25px;
-  margin-top: 220px;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
   margin-left: -5%;
   text-align: center;
 }
-
 
 
 
@@ -507,9 +509,8 @@ footer p {
   }
 
   .arrow-wrapper {
-    margin-top: 40%;
-    margin-left: -12%;
-    width: 112%;
+    margin-left: -10%;
+    width: 100%;
   }
   
 
@@ -537,10 +538,6 @@ footer p {
     width: 100%;
   }
 
- .arrow-wrapper {
-   margin-top: 35%;
- }
-
   .skill-tile {
     padding: 48px;
   }
@@ -552,9 +549,6 @@ footer p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .arrow-wrapper {
-    margin-top: 32%;
-  }
 
   #skills {
     padding: 64px 16px;
@@ -586,10 +580,6 @@ footer p {
     padding-top: 150px;
     height: 100vh;
   }
-
-  .arrow-wrapper {
-    margin-top: 25%;
-  }
   
   #skills {
     padding: 64px;
@@ -619,11 +609,7 @@ footer p {
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1500px) {
-  .arrow-wrapper {
-    margin-top: 40%;
-  }
-}
+/* @media only screen and (min-width: 1500px) {...} */
 
 /* Microsoft and Edge Browser */
 @supports (-ms-ime-align:auto) {
